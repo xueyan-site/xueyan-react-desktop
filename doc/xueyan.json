@@ -1,0 +1,13 @@
+{
+  "type": "react-application",
+  "moduleAlias": {
+    "xueyan-react-desktop": "../src",
+    "pages": "src/pages"
+  },
+  "startProxy": [
+    {
+      "path": "^/api",
+      "target": "https://xxx.com"
+    }
+  ]
+}
