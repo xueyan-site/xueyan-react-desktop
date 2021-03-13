@@ -4,13 +4,14 @@
  * @description 文档入口 document entry
  */
 
-import React, { lazy } from 'react'
+import React, { lazy, Suspense } from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Pages, { PageSources } from 'xueyan-react-pages'
 import './index.scss'
 
 const Readme = lazy(() => import('./readme'))
+const Example = lazy(() => import('./example'))
 
 const sources: PageSources = {
   en: {
@@ -78,7 +79,12 @@ const sources: PageSources = {
 function App() {
   return (
     <BrowserRouter>
-      <Pages readme={Readme} sources={sources} />
+      <Suspense fallback={null}>
+        <Switch>
+          <Route strict={true} path="/example" component={Example} />
+          <Pages readme={Readme} sources={sources} />
+        </Switch>
+      </Suspense>
     </BrowserRouter>
   )
 }

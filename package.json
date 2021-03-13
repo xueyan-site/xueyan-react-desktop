@@ -3,15 +3,26 @@
   "version": "1.0.0",
   "author": "xueyan <yang@xueyan.site>",
   "license": "MIT",
-  "description": "",
+  "description": "React Desktop System imitating IOS and Mac System",
   "xueyan": "xueyan.json",
   "main": "dist/lib",
   "module": "dist/es",
   "types": "dist/types",
-  "keywords": [],
+  "keywords": [
+    "react",
+    "typescript",
+    "component",
+    "xueyan-typescript",
+    "desktop",
+    "system",
+    "ios",
+    "mac",
+    "mobile",
+    "pc"
+  ],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/xueyan-site/xueyan-react-desktop.git"
   },
   "files": [
     "dist/**/*"
@@ -26,7 +37,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.5",
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
+    "xueyan-react-store": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^16.13.1",

@@ -1,0 +1,19 @@
+$dt-panel-block-color: rgba(56,56,56,.5);
+$dt-panel-line-color: rgba(214,214,214,.1);
+$dt-panel-blur: blur(10px);
+$dt-panel-border-radius: 8px;
+
+$dt-green-color: #03B069;
+$dt-blue-color: #0081d2;
+$dt-pink-color: #d300b4;
+$dt-origin-color: #e48817;
+
+@mixin dt-panel-background {
+  background-color: $dt-panel-block-color;
+  box-shadow: 0 0 0 1px $dt-panel-line-color;
+  backdrop-filter: $dt-panel-blur;
+}
+
+@mixin dt-panel-border-radius {
+  border-radius: $dt-panel-border-radius;
+}

@@ -1,0 +1,50 @@
+@import './common.scss';
+
+.wrapper {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  padding: 12px 0;
+  box-sizing: border-box;
+  @include dt-panel-background;
+  @include dt-panel-border-radius;
+}
+
+.dockItem {
+  width: 48px;
+  height: 40px;
+  position: relative;
+}
+
+.dockDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  background-color: $dt-green-color;
+  &.info {
+    background-color: $dt-blue-color;
+  }
+  &.warn {
+    background-color: $dt-origin-color;
+  }
+  &.error {
+    background-color: $dt-pink-color;
+  }
+}
+
+.dockIcon {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
